@@ -10,6 +10,7 @@ solution:
         :rtype: int
         """
         count=0
+        count1=0
         element=0
         for i in range(0,len(nums)):
             if count==0:
@@ -19,6 +20,13 @@ solution:
                 count +=1
             else:
                 count-=1
+
+        for num in nums:
+            if num==element:
+                count1 +=1
+        
+        if count1 > (len(nums)/2):
+            return element
 
         return element 
 
